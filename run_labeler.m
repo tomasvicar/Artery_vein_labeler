@@ -19,4 +19,5 @@ artery_vein_labeler(img_name,mask_name,user_name)
 % dělal sem to v 2021a matlabu, tak bude asi potřeba
 % cévy sem trochu dilatoval aby to bylo líp vidět (to pak vrátím zpátky) 
 % zmenšil sem obrázek na polovinu, aby to jelo trochu rychleji - i tak to není uplně super rychlé ale nenapadá mě jak to udělat líp
-
+% pro zoomavání je nejlepší aktivovat lupu a použít kolečko (aktivace v pravo nahoře na panelu nebo tlačítkem zoom on)
+% zoomování lze aktivovat zkratkou (y) ale nelze zkratkou vypnout (při zoomavání nefungují klávesové zkratky)
