@@ -2,12 +2,44 @@ clc;clear all;close all force;
 
 user_name = 'Tom';
 
-img_name = 'C:\Users\vicar\Desktop\code\Artery_vein_labeler\HRF\images\01_dr.JPG';
+%% HRF
+% img_name = 'C:\Users\vicar\Desktop\code\Artery_vein_labeler\HRF\images\01_dr.JPG';
+% params.dilatation = 3;
+% params.resize = 0.5;
+% params.min_len = 80;
+% mask_name = replace(replace(img_name,'images','manual1'),'.JPG','.tif');
 
-mask_name = replace(replace(img_name,'images','manual1'),'.JPG','.tif');
+
+%% DRHAGIS
+img_name = 'C:\Users\vicar\Desktop\code\Artery_vein_labeler\DRHAGIS\DRHAGIS\Fundus_Images\1.jpg';
+params.dilatation = 3;
+params.resize = 0.5;
+params.min_len = 80;
+mask_name = replace(replace(img_name,'Fundus_Images','Manual_Segmentations'),'.jpg','_manual_orig.png');
 
 
-artery_vein_labeler(img_name,mask_name,user_name)
+
+%% UoA_DR
+% img_name = 'C:\Users\vicar\Desktop\code\Artery_vein_labeler\UoA_DR\1\1.jpg';
+% params.dilatation = 3;
+% params.resize = 1;
+% params.min_len = 80;
+% mask_name = replace(replace(img_name,'Fundus_Images','Manual_Segmentations'),'.jpg','.1.jpg');
+
+
+
+artery_vein_labeler(img_name,mask_name,user_name,params)
+
+
+%%parametry
+
+%dilatece - aby čára nezakrývala cévu ale byla kolem ní - nastavte si jak
+%to bude příjemné - pak to stejně zmenšíme na původní velikost co má
+%maska...
+
+%resize - zmenšení obrázku pro rychlejší odezvu klikače 
+
+%min_len - filtr na délku kusů cév - kračí kusy cév se spojí....
 
 
 % malé cucky neřešte - to se pak kdyžtak nějak automaticky dočistí ;)
