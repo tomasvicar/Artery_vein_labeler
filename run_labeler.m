@@ -11,11 +11,11 @@ user_name = 'Tom';
 
 
 %% DRHAGIS
-img_name = 'C:\Users\vicar\Desktop\code\Artery_vein_labeler\DRHAGIS\DRHAGIS\Fundus_Images\1.jpg';
-params.dilatation = 3;
-params.resize = 0.5;
-params.min_len = 80;
-mask_name = replace(replace(img_name,'Fundus_Images','Manual_Segmentations'),'.jpg','_manual_orig.png');
+% img_name = 'C:\Users\vicar\Desktop\code\Artery_vein_labeler\DRHAGIS\DRHAGIS\Fundus_Images\1.jpg';
+% params.dilatation = 3;
+% params.resize = 0.5;
+% params.min_len = 80;
+% mask_name = replace(replace(img_name,'Fundus_Images','Manual_Segmentations'),'.jpg','_manual_orig.png');
 
 
 
@@ -25,6 +25,15 @@ mask_name = replace(replace(img_name,'Fundus_Images','Manual_Segmentations'),'.j
 % params.resize = 1;
 % params.min_len = 80;
 % mask_name = replace(replace(img_name,'Fundus_Images','Manual_Segmentations'),'.jpg','.1.jpg');
+
+
+
+%% nove
+img_name = "D:\Vessel_masks_labeled\Fundus_Images\Gacr_01_002_01_L.JPG";
+params.dilatation = 3;
+params.resize = 0.5;
+params.min_len = 80;
+mask_name = replace(replace(img_name,'Fundus_Images','Manual_Segmentations'),'.JPG','_vessel_segmented.tif');
 
 
 
